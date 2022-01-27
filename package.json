@@ -1,0 +1,20 @@
+{
+  "name": "lf-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Bardouni Naoufal <bardouni.naoufal@gmail.com>",
+  "scripts":{
+    "client": "cd front && yarn watch && yarn relay --watch ",
+    "server": "cd backend && yarn tsc -w && yarn db && yarn start",
+    "build": "cd front && yarn build",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
+  "license": "MIT",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {},
+  "workspaces": [
+    "front",
+    "lightfunnels-front"
+  ]
+}
